@@ -1,0 +1,172 @@
+# Student Dashboard App
+
+A comprehensive React Native application built with Expo CLI that provides a student dashboard interface with navigation, student management, course tracking, and attendance monitoring.
+
+## Features
+
+### 🎯 Core Functionality
+- **React Navigation**: Stack and Bottom Tab navigation
+- **Student Management**: Complete student list with detailed profiles
+- **Course Tracking**: Course details with grades and progress
+- **Attendance Monitoring**: Visual progress bars and attendance history
+- **Profile Management**: Comprehensive student profile with statistics
+
+### 📱 Screens
+1. **Students Tab**
+   - Student list with FlatList implementation
+   - Tap navigation to detailed student profiles
+   - Attendance summary for each student
+   - Gender-based color coding
+
+2. **Courses Tab**
+   - Course list with grades and progress
+   - Detailed course information
+   - Assignment tracking
+   - Attendance per course
+
+3. **Attendance Tab**
+   - Progress bar visualization
+   - Time slot selection (Morning, Afternoon, Evening)
+   - Attendance history
+   - Statistics and summaries
+
+4. **Profile Tab**
+   - Student profile information
+   - Academic statistics
+   - Settings and options
+   - Emergency contact details
+
+### 🎨 Design Features
+- **Consistent Theme**: Purple and blue gradient design matching the provided mockup
+- **Clean UI**: Card-based layout with proper spacing and shadows
+- **Mobile Optimized**: Responsive design for mobile devices
+- **Status Indicators**: Color-coded status for attendance, grades, and gender
+- **Progress Visualization**: Progress bars for attendance tracking
+
+## Technology Stack
+
+- **React Native** with Expo CLI
+- **React Navigation** (Stack + Bottom Tabs)
+- **Expo Linear Gradient** for gradient backgrounds
+- **Expo Vector Icons** for consistent iconography
+- **Custom Theme System** for consistent styling
+
+## Installation & Setup
+
+1. **Prerequisites**
+   ```bash
+   npm install -g expo-cli
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   cd StudentDashboard
+   npm install
+   ```
+
+3. **Run the Application**
+   ```bash
+   # For iOS (requires macOS)
+   npm run ios
+   
+   # For Android
+   npm run android
+   
+   # For Web
+   npm run web
+   
+   # Start Expo development server
+   npx expo start
+   ```
+
+## Project Structure
+
+```
+StudentDashboard/
+├── App.js                 # Main app component with navigation setup
+├── src/
+│   ├── screens/          # All screen components
+│   │   ├── StudentsScreen.js
+│   │   ├── StudentDetailsScreen.js
+│   │   ├── CoursesScreen.js
+│   │   ├── CourseDetailsScreen.js
+│   │   ├── AttendanceScreen.js
+│   │   └── ProfileScreen.js
+│   ├── styles/
+│   │   └── theme.js      # Centralized theme configuration
+│   └── data/
+│       └── mockData.js   # Sample data for development
+└── README.md
+```
+
+## Key Components
+
+### Navigation Structure
+- **MainTabs**: Bottom tab navigator with 4 tabs
+- **StudentsStack**: Stack navigator for student-related screens
+- **CoursesStack**: Stack navigator for course-related screens
+
+### Theme System
+- Centralized color palette matching the design
+- Typography scale and spacing system
+- Shadow and border radius configurations
+- Consistent styling across all components
+
+### Data Management
+- Mock data structure for students, courses, and attendance
+- Realistic sample data for testing and development
+- Extensible data models for future enhancements
+
+## Features Implemented
+
+✅ **React Navigation** with Stack and Bottom Tabs  
+✅ **Student List** with FlatList and tap navigation  
+✅ **Student Details** screen with comprehensive information  
+✅ **Course Details** with grades and progress tracking  
+✅ **Attendance** with progress bar visualization  
+✅ **Clean, consistent CSS styling** and mobile layout  
+✅ **Purple/blue theme** matching the provided design  
+
+## Customization
+
+### Adding New Students
+Edit `src/data/mockData.js` to add new student entries with the following structure:
+```javascript
+{
+  id: 'unique_id',
+  name: 'Student Name',
+  email: 'email@domain.com',
+  // ... other properties
+}
+```
+
+### Modifying Theme
+Update `src/styles/theme.js` to customize colors, typography, and spacing.
+
+### Adding New Screens
+1. Create new screen component in `src/screens/`
+2. Add to appropriate stack navigator in `App.js`
+3. Update navigation types if using TypeScript
+
+## Development Notes
+
+- The app uses mock data for demonstration purposes
+- All screens are fully functional with realistic data
+- The design closely matches the provided screenshot
+- Navigation is properly configured with stack and tab navigators
+- Progress bars are implemented for attendance visualization
+- Color coding is used throughout for status indicators
+
+## Future Enhancements
+
+- Real API integration
+- User authentication
+- Push notifications
+- Offline data storage
+- Advanced filtering and search
+- Export functionality for reports
+- Dark mode support
+
+## License
+
+This project is created for educational purposes as part of a React Native assignment.
